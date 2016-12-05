@@ -15,7 +15,7 @@ sudo zypper install ffmpeg lame gstreamer-plugins-bad gstreamer-plugins-ugly gst
 sudo zypper dist-upgrade
 
 echo "Installing apps"
-sudo zypper install inkscape gimp lollypop bleachbit unetbootin wine xournal kile goldendict pdfchain uget steam octave vlc r-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx 
+sudo zypper install inkscape gimp lollypop bleachbit unetbootin wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx 
 
 echo "Some packages"
 sudo zypper install cmake automake texlive-subfloat
