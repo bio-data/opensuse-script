@@ -18,7 +18,7 @@ sudo zypper -n install ffmpeg lame gstreamer-plugins-bad gstreamer-plugins-ugly 
 sudo zypper dist-upgrade
 
 echo "Installing apps"
-sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx meld
+sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin evince-plugin-djvudocument evince-plugin-comicsdocument evince-plugin-xpsdocument evince-plugin-tiffdocument evince-plugin-dvidocument wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx meld
 
 echo "Some latex and R packages"
 sudo zypper install cmake automake texlive-subfloat zlibrary ghc-zlib zlib-devel libopenssl-devel libssh2-devel libcurl-devel libconfig9 libconfig++9 libconfig-devel gcc-c++ typelib-1_0-GtkVnc-1_0 typelib-1_0-GtkVnc-2_0 libgtk-vnc-1_0-0 libgtk-vnc-2_0-0
