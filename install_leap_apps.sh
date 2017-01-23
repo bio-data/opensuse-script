@@ -52,8 +52,6 @@ sudo zypper -n ar -f http://download.opensuse.org/repositories/Application:/Geo/
 
 sudo zypper -n ar -f http://download.opensuse.org/repositories/home:/cornell_vrdc/openSUSE_Leap_42.2/home:cornell_vrdc.repo
 
-sudo zypper -n ar -f http://download.opensuse.org/repositories/home:/cornell_vrdc/openSUSE_Leap_42.2/home:bgta:desktop.repo
-
 sudo zypper --gpg-auto-import-keys ref
 
 sudo zypper -n refresh
@@ -64,13 +62,13 @@ echo "+------------------------------------------------------------------+"
 echo "Installing apps"
 echo "+------------------------------------------------------------------+"
 
-sudo zypper install brackets GitKraken PlayOnLinux viking jabref skype 
+sudo zypper install brackets GitKraken PlayOnLinux viking jabref
 
-wget https://download1.rstudio.org/rstudio-1.0.44-x86_64.rpm
+wget https://download1.rstudio.org/rstudio-1.0.136-x86_64.rpm
 
-sudo zypper -n install rstudio-1.0.44-x86_64.rpm
+sudo zypper -n install rstudio-1.0.136-x86_64.rpm
 
-sudo rm rstudio-1.0.44-x86_64.rpm
+sudo rm rstudio-1.0.136-x86_64.rpm
 
 sudo zypper -n dist-upgrade
 
