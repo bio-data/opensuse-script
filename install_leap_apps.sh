@@ -39,42 +39,20 @@ echo "+------------------------------------------------------------------+"
 sudo zypper install cmake automake texlive-subfloat texlive-wrapfig zlibrary ghc-zlib zlib-devel libopenssl-devel libssh2-devel libcurl-devel libconfig9 libconfig++9 libconfig-devel gcc-c++ typelib-1_0-GtkVnc-1_0 typelib-1_0-GtkVnc-2_0 libgtk-vnc-1_0-0 libgtk-vnc-2_0-0 gtk-devel libxml2-devel gtk-devel gnome-doc-utils gnome-doc-utils-devel libgexiv2-devel libgps22
 
 echo "+------------------------------------------------------------------+"
-echo "Electron Apps"
+echo "Electron Apps - GitKraken, Franz, Manageyum, ClipGrab and Stremio"
 echo "+------------------------------------------------------------------+"
 
-mkdir ElectronsApps
+wget http://getmega.net/index.php/download/file_a3e0f6660f/ElectronApps.tar.gz
+sudo tar -xvf ElectronApps.tar.gz
+sudo rm ElectronApps.tar.gz
 
-echo "GitKraken"
-cd ElectronsApps
-wget https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
-sudo tar -vzxf gitkraken-amd64.tar.gz
-rm gitkraken-amd64.tar.gz
-
-echo "Franz"
-mkdir Franz
-wget https://github.com/meetfranz/franz-app/releases/download/4.0.4/Franz-linux-x64-4.0.4.tgz
-sudo tar -vzxf Franz-linux-x64-4.0.4.tgz
-rm Franz-linux-x64-4.0.4.tgz
-cd ..
-
-echo "Manageyum"
-wget https://github.com/Revmakx/manageyum/releases/download/V1.1.1/Manageyum-1.1.1.x64.tar.gz
-sudo tar -vzxf Manageyum-1.1.1.x64.tar.gz
-rm Manageyum-1.1.1.x64.tar.gz
-
-echo "ClipGrab
-wget https://download.clipgrab.org/clipgrab-3.6.2.tar.bz2
-sudo tar -jxvf clipgrab-3.6.2.tar.bz2
-rm clipgrab-3.6.2.tar.bz2
-
-echo "Stremio"
-wget http://dl.strem.io/Stremio3.6.5.linux.tar.gz
-sudo tar -vzxf Stremio3.6.5.linux.tar.gz
-rm clipgrab-3.6.2.tar.bz2
+echo "+------------------------------------------------------------------+"
+echo "Other Apps"
+echo "+------------------------------------------------------------------+"
 
 echo "JabRef"
 wget https://downloads.sourceforge.net/project/jabref/v3.8.2/JabRef-3.8.2.jar
-# java -jar JabRef-3.8.2.jar comando pra abrir
+# java -jar JabRef-3.8.2.jar to open
 
 cd ..
 
