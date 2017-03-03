@@ -31,7 +31,7 @@ sudo zypper dist-upgrade
 echo "+------------------------------------------------------------------+"
 echo "Installing Apps"
 echo "+------------------------------------------------------------------+"
-sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin evince-plugin-djvudocument evince-plugin-comicsdocument evince-plugin-xpsdocument evince-plugin-tiffdocument evince-plugin-dvidocument wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx meld gpodder geany latexila redshift redshift-gtk
+sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin evince-plugin-djvudocument redshift evince-plugin-comicsdocument evince-plugin-xpsdocument evince-plugin-tiffdocument evince-plugin-dvidocument wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx meld gpodder geany latexila redshift redshift-gtk
 
 echo "+------------------------------------------------------------------+"
 echo "Some packages"
