@@ -50,11 +50,11 @@ echo "+------------------------------------------------------------------+"
 echo "Other Apps"
 echo "+------------------------------------------------------------------+"
 
-echo "JabRef"
-wget https://downloads.sourceforge.net/project/jabref/v3.8.2/JabRef-3.8.2.jar
-# java -jar JabRef-3.8.2.jar to open
+cd Downloads/
 
-cd ..
+echo "JabRef"
+wget http://download.opensuse.org/repositories/home:/sebschub/openSUSE_Leap_42.2/noarch/jabref-3.8.1-12.1.noarch.rpm
+sudo zypper install jabref-3.8.1-12.1.noarch.rpm
 
 echo "yEd"
 wget http://www.yworks.com/resources/yed/demo/yEd-3.16.2.1_64-bit_setup.sh
@@ -63,22 +63,24 @@ sh yEd-3.16.2.1_64-bit_setup.sh
 sudo rm yEd-3.16.2.1_64-bit_setup.sh
 
 echo "Viking GPS"
-wget https://downloads.sourceforge.net/project/viking/viking-1.6.2.tar.bz2
-sudo tar -jxvf viking-1.6.2.tar.bz2
-cd viking-1.6.2
-sudo ./configure --disable-realtime-gps-tracking --disable-magic --disable-mbtiles --disable-mapnik
-sudo make
-sudo make install
+wget http://download.opensuse.org/repositories/Application:/Geo/openSUSE_Leap_42.2/x86_64/viking-1.6.2-2.10.x86_64.rpm
+sudo zypper install -n viking-1.6.2-2.10.x86_64.rpm
+sudo rm viking-1.6.2-2.10.x86_64.rpm
 
 echo "Rstudio"
 wget https://download1.rstudio.org/rstudio-1.0.136-x86_64.rpm
 sudo zypper -n install rstudio-1.0.136-x86_64.rpm
 sudo rm rstudio-1.0.136-x86_64.rpm
 
-#echo "Brackets"
-#wget https://github.com/adobe/brackets/archive/release-1.8.tar.gz
-#sudo tar -vzxf release-1.8.tar.gz
-#sudo rm release-1.8.tar.gz
+echo "Brackets"
+wget http://download.opensuse.org/repositories/home:/awissu/openSUSE_Leap_42.2/x86_64/brackets-1.8-1.1.x86_64.rpm
+sudo zypper install -n brackets-1.8-1.1.x86_64.rpm
+sudo rm brackets-1.8-1.1.x86_64.rpm
+
+echo "Qgis"
+wget http://download.opensuse.org/repositories/Application:/Geo/openSUSE_Leap_42.2/x86_64/qgis-2.18.4-2.8.x86_64.rpm
+sudo zypper -n install qgis-2.18.4-2.8.x86_64.rpm
+sudo rm qgis-2.18.4-2.8.x86_64.rpm
 
 sudo zypper -n refresh
 
