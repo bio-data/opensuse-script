@@ -99,10 +99,8 @@ sudo zypper -n clean
 echo "+------------------------------------------------------------------+"
 echo "Removing trash"
 echo "+------------------------------------------------------------------+"
-sudo zypper -n remove gnome-contacts gnome-dictionary gnome-weather empathy okular gnome-nibbles gnome-robots gnome-tetravex
-four-in-a-row polari liferea five-or-more gnome-klotski tali konqueror gnome-documents gnome-music gnome-maps evolution 
-shotwell aisleriot iagno xboard gnuchess quadrapassel gnome-clocks gnome-sudoku swell-foop lightsoff gnome-mines 
-gnome-mahjongg bijiben gnome-software nautilus-sendto evolution-data-server
+sudo zypper -n remove gnome-contacts gnome-dictionary gnome-weather empathy okular gnome-nibbles gnome-robots gnome-tetravex four-in-a-row polari liferea five-or-more gnome-klotski tali konqueror gnome-documents gnome-music gnome-maps evolution 
+shotwell aisleriot iagno xboard gnuchess quadrapassel gnome-clocks gnome-sudoku swell-foop lightsoff gnome-mines gnome-mahjongg bijiben gnome-software nautilus-sendto evolution-data-server
 
 echo "+------------------------------------------------------------------+"
 echo "Reboot?"
