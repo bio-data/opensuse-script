@@ -36,7 +36,7 @@ sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin evince-plugin
 echo "+------------------------------------------------------------------+"
 echo "Some packages"
 echo "+------------------------------------------------------------------+"
-sudo zypper install cmake automake fetchmsttfonts texlive-subfloat nlopt-devel texlive-mdframed texlive-wrapfig zlibrary ghc-zlib zlib-devel libopenssl-devel libssh2-devel libcurl-devel libconfig9 libconfig++9 libconfig-devel gcc-c++ typelib-1_0-GtkVnc-1_0 typelib-1_0-GtkVnc-2_0 libgtk-vnc-1_0-0 libgtk-vnc-2_0-0 gtk-devel libxml2-devel gtk-devel gnome-doc-utils gnome-doc-utils-devel libgexiv2-devel libgps22
+sudo zypper install cmake automake fetchmsttfonts texlive-subfloat nlopt-devel texlive-mdframed texlive-wrapfig zlibrary ghc-zlib zlib-devel libopenssl-devel libssh2-devel libcurl-devel libconfig9 libconfig++9 libconfig-devel gcc-c++ typelib-1_0-GtkVnc-1_0 typelib-1_0-GtkVnc-2_0 libgtk-vnc-1_0-0 libgtk-vnc-2_0-0 gtk-devel libxml2-devel gtk-devel gnome-doc-utils gnome-doc-utils-devel libgexiv2-devel libgps22 gnome-themes gnome-themes-extras VirtualGL VirtualGL-32bit VirtualGL-devel libgcrypt-devel
 
 echo "+------------------------------------------------------------------+"
 echo "Electron Apps - GitKraken, Franz, Manageyum, ClipGrab and Stremio"
