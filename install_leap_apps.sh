@@ -90,6 +90,11 @@ sudo zypper -n dist-upgrade
 
 sudo zypper -n dist-upgrade --from packman
 
+echo "Snappy"
+sudo zypper addrepo http://download.opensuse.org/repositories/system:/snappy/openSUSE_Leap_42.2/ snappy
+sudo zypper install snapd
+sudo systemctl enable --now snapd.socket
+
 echo "+------------------------------------------------------------------+"
 echo "Finishing"
 echo "+------------------------------------------------------------------+"
