@@ -1,12 +1,10 @@
 #!/bin/bash
 
-echo "+-----------------------------------------------------+"
-echo "|    openSUSE 42.2 GNOME apps installation script     |"
-echo "+-----------------------------------------------------+"
+echo "+-------------------------------------------------------+"
+echo "|    openSUSE 42.3 GNOME - apps installation script     |"
+echo "+-------------------------------------------------------+"
 
-# For openSUSE Leap 42.2 and use at your own risk!
-# Vinícius Barros Rodrigues, for sugestions: viniciusbrbio@gmail.com
-# If you want avoid installing some stuffs add hashtag in the lines.
+# For openSUSE Leap 42.3 and use at your own risk!
 
 echo "+------------------------------------------------------------------+"
 echo "Update and dist-upgrade"
@@ -17,26 +15,26 @@ sudo zypper -n dist-upgrade
 echo "+------------------------------------------------------------------+"
 echo "Packman and Libdvdcss repos for Multimedia"
 echo "+------------------------------------------------------------------+"
-sudo zypper -n ar -f http://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_42.2/ packman
-sudo zypper -n ar -f http://opensuse-guide.org/repo/openSUSE_Leap_42.2/ libdvdcss
+sudo zypper -n ar -f http://packman.inode.at/suse/openSUSE_Leap_42.3/ packman
+# sudo zypper -n ar -f http://opensuse-guide.org/repo/openSUSE_Leap_42.2/ libdvdcss
 sudo zypper --gpg-auto-import-keys ref
-sudo zypper up
+
 
 echo "+------------------------------------------------------------------+"
 echo "Installing Multimedia Packages"
 echo "+------------------------------------------------------------------+"
-sudo zypper -n install ffmpeg lame gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-plugins-ugly-orig-addon gstreamer-plugins-libav libdvdcss2 --auto-agree-with-licenses
-sudo zypper dist-upgrade
+sudo zypper -n install ffmpeg lame gstreamer-plugins-bad gstreamer-plugins-ugly gstreamer-plugins-ugly-orig-addon gstreamer-plugins-libav libdvdcss2
+sudo zypper dup --from packman
+
 
 echo "+------------------------------------------------------------------+"
-echo "Installing Apps"
+echo "Installing apps and packages"
 echo "+------------------------------------------------------------------+"
-sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin evince-plugin-djvudocument redshift evince-plugin-comicsdocument evince-plugin-xpsdocument evince-plugin-tiffdocument evince-plugin-dvidocument wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel virtualbox openshot breeze keepassx meld gpodder geany latexila redshift redshift-gtk gpick
+sudo zypper -n install inkscape gimp lollypop bleachbit unetbootin evince-plugin-djvudocument evince-plugin-comicsdocument evince-plugin-xpsdocument evince-plugin-tiffdocument evince-plugin-dvidocument wine xournal kile goldendict pdfchain uget steam octave vlc R-base git kdenlive audacity simplescreenrecorder gpsbabel gradio breeze keepassx meld geany redshift redshift-gtk chromium
 
-echo "+------------------------------------------------------------------+"
-echo "Some packages"
-echo "+------------------------------------------------------------------+"
-sudo zypper install cmake automake fetchmsttfonts texlive-subfloat nlopt-devel texlive-mdframed texlive-wrapfig zlibrary ghc-zlib zlib-devel libopenssl-devel libssh2-devel libcurl-devel libconfig9 libconfig++9 libconfig-devel gcc-c++ typelib-1_0-GtkVnc-1_0 typelib-1_0-GtkVnc-2_0 libgtk-vnc-1_0-0 libgtk-vnc-2_0-0 gtk-devel libxml2-devel gtk-devel gnome-doc-utils gnome-doc-utils-devel libgexiv2-devel libgps22 gnome-themes gnome-themes-extras VirtualGL VirtualGL-32bit VirtualGL-devel libgcrypt-devel
+sudo zypper -n install cmake automake fetchmsttfonts texlive-subfloat nlopt-devel texlive-mdframed texlive-wrapfig zlibrary ghc-zlib zlib-devel libopenssl-devel libssh2-devel libcurl-devel libconfig9 libconfig++9 libconfig-devel gcc-c++ typelib-1_0-GtkVnc-1_0 typelib-1_0-GtkVnc-2_0 libgtk-vnc-1_0-0 libgtk-vnc-2_0-0 libxml2-devel gnome-doc-utils gnome-doc-utils-devel libgexiv2-devel libgps22 gnome-themes gnome-themes-extras VirtualGL VirtualGL-32bit VirtualGL-devel libgcrypt-devel
+
+# sudo zypper install gppoder -- problems from the repo, it's better build it from source
 
 echo "+------------------------------------------------------------------+"
 echo "Electron Apps - GitKraken, Franz, Manageyum, ClipGrab and Stremio"
@@ -102,10 +100,11 @@ sudo zypper -n verify
 sudo zypper -n clean
 
 echo "+------------------------------------------------------------------+"
-echo "Removing trash"
+echo "Removing the useless ones"
 echo "+------------------------------------------------------------------+"
-sudo zypper -n remove gnome-contacts gnome-dictionary gnome-weather empathy okular gnome-nibbles gnome-robots gnome-tetravex four-in-a-row polari liferea five-or-more gnome-klotski tali konqueror gnome-documents gnome-music gnome-maps evolution 
-shotwell aisleriot iagno xboard gnuchess quadrapassel gnome-clocks gnome-sudoku swell-foop lightsoff gnome-mines gnome-mahjongg bijiben gnome-software nautilus-sendto evolution-data-server
+sudo zypper -n remove empathy gnome-nibbles gnome-robots gnome-tetravex four-in-a-row liferea five-or-more gnome-klotski tali nome-sudoku swell-foop lightsoff gnome-mines gnome-mahjongg bijiben gnome-software evolution aisleriot iagno xboard gnuchess quadrapassel
+sudo zypper -n remove evolution-data-server tracker
+sudo zypper -n remove gnome-contacts gnome-dictionary gnome-weather gnome-documents gnome-music gnome-maps shotwell gnome-clocks nautilus-sendto
 
 echo "+------------------------------------------------------------------+"
 echo "Reboot?"
